@@ -1,4 +1,5 @@
 import os
+import pya3rt
 from janome.tokenizer import Tokenizer
 import requests
 
@@ -41,9 +42,11 @@ def callback():
 @handler.add(MessageEvent, message=TextMessage)
 def message_text(event):
     push_text = event.message.text
-    reply_text = judge_polarity(push_text)
+    reply_text1 = textapi_response(push_text)
+    reply_text2 = judge_polarity(push_text)
 
-    line_bot_api.reply_message(event.reply_token, TextSendMessage(text=reply_text))
+    line_bot_api.reply_message(event.reply_token, TextSendMessage(text=reply_text1))
+    line_bot_api.reply_message(event.reply_token, TextSendMessage(text=reply_text2))
 
 dict_polarity = {}
 with open('./polarity.txt', 'r') as f:
@@ -65,11 +68,18 @@ def judge_polarity(text):
             pol_val = round(pol_val, 5)
 
     if pol_val > 0.3:
-        return "ポジティブです。\nScore: " + str(pol_val)
+        return "ポジティブです。 Score: " + str(pol_val)
     elif pol_val < -0.3:
-        return "ネガティブです。\nScore: " + str(pol_val)
+        return "ネガティブです。 Score: " + str(pol_val)
     else:
-        return "ニュートラルです。\nScore: " + str(pol_val)
+        return "ニュートラルです。 Score: " + str(pol_val)
+
+def textapi_response(text):
+    apikey = 'DZZjgr9uaJ0Mdb5rLv2Ic4EknPcsUhKL'
+    client = pya3rt.TextClassificationClient(apikey)
+    response = client.classify(text)
+
+    return response['classes'][0]['label']
 
 if __name__ == "__main__":
     app.run()

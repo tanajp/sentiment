@@ -12,3 +12,4 @@ requests==2.12.4
 urllib3==1.25.7
 Werkzeug==0.16.0
 janome==0.3.10
+pya3rt==1.1

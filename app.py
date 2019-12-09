@@ -65,14 +65,11 @@ def judge_polarity(text):
             pol_val = round(pol_val, 5)
 
     if pol_val > 0.3:
-        return "ポジティブです。¥n
-         Score: " + str(pol_val)
+        return "ポジティブです。\n Score: " + str(pol_val)
     elif pol_val < -0.3:
-        return "ネガティブです。¥n
-         Score: " + str(pol_val)
+        return "ネガティブです。\n Score: " + str(pol_val)
     else:
-        return "ニュートラルです。¥n
-         Score: " + str(pol_val)
+        return "ニュートラルです。\n Score: " + str(pol_val)
 
 if __name__ == "__main__":
     app.run()

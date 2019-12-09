@@ -70,11 +70,11 @@ def judge_polarity(text):
             pol_val = round(pol_val, 5)
 
     if pol_val > 0.3:
-        return "ポジティブです。 Score: " + str(pol_val)
+        return "ポジティブです。\nScore: " + str(pol_val)
     elif pol_val < -0.3:
-        return "ネガティブです。 Score: " + str(pol_val)
+        return "ネガティブです。\nScore: " + str(pol_val)
     else:
-        return "ニュートラルです。 Score: " + str(pol_val)
+        return "ニュートラルです。\nScore: " + str(pol_val)
 
 def textapi_response(text):
     apikey = 'DZZjgr9uaJ0Mdb5rLv2Ic4EknPcsUhKL'

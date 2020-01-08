@@ -202,7 +202,7 @@ if __name__ == "__main__":
     app.run()
 ```
 サーバーの立ち上げを行う。
-
+***
 
 ##  動作イメージ
 <img src="https://user-images.githubusercontent.com/50686226/71962790-986e9800-323d-11ea-8a8a-64e123399f7e.png" width="500">

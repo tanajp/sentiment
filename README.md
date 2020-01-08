@@ -199,4 +199,4 @@ if __name__ == "__main__":
 サーバーの立ち上げを行う。
 
 ## イメージ
-![IMG_2173](https://user-images.githubusercontent.com/50686226/71962087-0e71ff80-323c-11ea-9d4a-b1d9ed396a32.JPG)
+<img src="https://user-images.githubusercontent.com/50686226/71962790-986e9800-323d-11ea-8a8a-64e123399f7e.png" width="100">

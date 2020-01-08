@@ -3,14 +3,17 @@
 ## 概要
 ニュース記事のタイトルなどを入力すると、その記事のトピックを推定し、タイトルから記事の内容がネガティブなのか、ポジティブなのかを推測してくれる。
 
+
 ## 開発環境
 Python 3.7.4  
+
 
 ## 使用サービス
 [LINE Messaging API](https://developers.line.biz/ja/services/messaging-api/)  
 [Text Classification API](https://a3rt.recruit-tech.co.jp/product/textClassification/)   
 [HEROKU](https://jp.heroku.com/)    
 [単語感情極性対応表](http://www.lr.pi.titech.ac.jp/~takamura/pubs/pn_ja.dic)  
+
 
 ## 必要なファイル
 | ファイル名 | 役割 |
@@ -20,6 +23,7 @@ Python 3.7.4
 | requirements.txt | 必要なライブラリを記述 |
 | app.py | ソースコード |
 | polarity.txt | 単語感情極性対応表 |
+
 
 ## ソースコード
 ```python
@@ -111,6 +115,7 @@ def textapi_response(text):
 if __name__ == "__main__":
     app.run()
 ```
+
 ## 詳細
 ```python
 @app.route("/callback", methods=['POST'])
@@ -197,6 +202,7 @@ if __name__ == "__main__":
     app.run()
 ```
 サーバーの立ち上げを行う。
+
 
 ##  動作イメージ
 <img src="https://user-images.githubusercontent.com/50686226/71962790-986e9800-323d-11ea-8a8a-64e123399f7e.png" width="500">

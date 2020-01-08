@@ -8,7 +8,7 @@ idna==2.8
 itsdangerous==1.1.0
 line-bot-sdk==1.15.0
 MarkupSafe==1.1.1
-requests==2.12.4
+requests==2.20.0
 urllib3==1.25.7
 Werkzeug==0.16.0
 janome==0.3.10

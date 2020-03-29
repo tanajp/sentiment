@@ -32,7 +32,6 @@ Python 3.7.4
 
 ## ソースコード
 ```python
-import os
 import pya3rt
 from janome.tokenizer import Tokenizer
 import requests

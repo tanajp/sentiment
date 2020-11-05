@@ -77,7 +77,7 @@ def judge_polarity(text):
         return "ニュートラルです。\nScore: " + str(pol_val)
 
 def textapi_response(text):
-    apikey = 'DZZjgr9uaJ0Mdb5rLv2Ic4EknPcsUhKL'
+    apikey = '****************'
     client = pya3rt.TextClassificationClient(apikey)
     response = client.classify(text)
 
